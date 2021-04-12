@@ -25,38 +25,20 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Home Automation</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action bg-light text-center" href="/menu_button">
+                <a class="list-group-item list-group-item-action bg-light text-center" href="menu.html">
                     Menu
                 </a>
-                <a class="list-group-item list-group-item-action bg-light fas fa-user" href="/user_button">
+                <a class="list-group-item list-group-item-action bg-light fas fa-user" href="user.html">
                     Add User
                 </a>
-                <a class="list-group-item list-group-item-action bg-light fas fa-home" href="/rumah_button">
+                <a class="list-group-item list-group-item-action bg-light fas fa-home" href="rumah.html">
                     Home Automation
                 </a>
-                <a class="list-group-item list-group-item-action bg-light fas fa-clock" href="/jadwal_button">
-                    Schedule
-                </a>
-                <!-- <div class="row text-center pt-3">
-                    <p>Schadule Pompa</p>
-                    <form action="get">
-                        <input type="time" name="on" id="butonon">On
-                        <button class="btn">Submit</button>
-                        <input type="time" name="off" id="butonoff">Off
-                        <button class="btn">Submit</button>
-                    </form>
-                </div> -->
-                    
                 
-                <a class="list-group-item list-group-item-action bg-light" href="/kontak_button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
-                    </svg>
+                <a class="list-group-item list-group-item-action bg-light fas fa-envelope" href="kontak.html">
                     Our Contact
                 </a>
-                <div class="container pt-xl-5 figure-img">
+                <div class="container pt-5">
                     <img src="pi.png" alt="logo" width="200" height="150">
                 </div>
             </div>
@@ -113,57 +95,113 @@
 
                         <tr>
                             <td id="nomor">1</td>
-                            <td id="unit">Pompa</td>
-                            <td id="onr1"></td>
-                            <td id="offr1"></td>
+                            <td id="unit">Ruang 1</td>
+                            <td id="onr1" align="center"></td>
+                            <td id="offr1" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal1" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
-                        <!-- <tr>
+                        <tr>
                             <td id="nomor">2</td>
                             <td id="unit">Ruang 2</td>
-                            <td id="onr2"></td>
-                            <td id="offr2"></td>
+                            <td id="onr2" align="center"></td>
+                            <td id="offr2" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal2" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">3</td>
                             <td id="unit">Ruang 3</td>
-                            <td id="onr3"></td>
-                            <td id="offr3"></td>
+                            <td id="onr3" align="center"></td>
+                            <td id="offr3" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal3" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">4</td>
                             <td id="unit">Ruang 4</td>
-                            <td id="onr4"></td>
-                            <td id="offr4"></td>
+                            <td id="onr4" align="center"></td>
+                            <td id="offr4" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal4" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">5</td>
                             <td id="unit">Ruang 5</td>
-                            <td id="onr5"></td>
-                            <td id="offr5"></td>
+                            <td id="onr5" align="center"></td>
+                            <td id="offr5" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal5" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">6</td>
                             <td id="unit">Ruang 6</td>
-                            <td id="onr6"></td>
-                            <td id="offr6"></td>
+                            <td id="onr6" align="center"></td>
+                            <td id="offr6" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal6" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">7</td>
                             <td id="unit">Ruang 7</td>
-                            <td id="onr7"></td>
-                            <td id="offr7"></td>
+                            <td id="onr7" align="center"></td>
+                            <td id="offr7" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal7" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">8</td>
                             <td id="unit">Ruang 8</td>
-                            <td id="onr8"></td>
-                            <td id="offr8"></td>
-                        </tr> -->
+                            <td id="onr8" align="center"></td>
+                            <td id="offr8" align="center"></td>
+                            <td align="center">
+                                <button id="jadwal8" class="btn btn-danger">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Hapus
+                                </button>
+                            </td>		
+                        </tr>
                         
 
                     </table>
                 </div>
-                <footer class="text-center fixed-bottom">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
+                <footer class="text-center">&copy; 2021 CV. Planet Intelligent</footer>
             </main>
             
         </div>
@@ -178,40 +216,8 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
         <script>
-            var obj;
-            var gwUrl = "ws://" + location.host + "/ws";
-            var webSocket = new WebSocket(gwUrl);
-            var waktuOn;
-            var waktuOff;
-
-            webSocket.onopen = function(event) {
-                console.log("open");
-            }
-            
-            webSocket.onclose = function(event) {
-                console.log("close");
-            }
-
-            webSocket.onmessage = function (event) {
-                // document.getElementById("rxConsole").value += event.data;
-                obj = JSON.parse(event.data);
-    
-                var full_data1 = event.data;
-                console.log(full_data1);
-                var data = JSON.parse(full_data1);
-
-                waktuOn = data.jamon+':'+data.meniton;
-                waktuOff = data.jamoff+':'+data.menitoff;
-
-                // waktuOn = data.waktuon;
-                // waktuOff = data.waktuoff;
-                
-                document.getElementById("onr1").innerHTML = waktuOn;
-                document.getElementById("offr1").innerHTML = waktuOff;
-            }
-
-            $("#menu-toggle").click(function (event) {
-                event.preventDefault();
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
                 $("#wrapper").toggleClass("toggled");
             });
         </script>
