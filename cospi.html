@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Energy Monitoring</title>
+    <title>Cospi</title>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
@@ -131,8 +131,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/keluar_button">Sign Out</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="login.png" alt="logo" width="25" height="25">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/reset">Sign Out</a>
+                              <a class="dropdown-item" href="/reset">Reset Password</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -169,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <footer class="text-center fixed-bottom">&copy; 2021 CV. Planet Intelligent</footer>
+                <footer class="text-center fixed-bottom">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
             </main>
             
         </div>
