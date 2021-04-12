@@ -1,0 +1,438 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Automation</title>
+    <link rel="stylesheet" href="sidebar.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Home Automation</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action bg-light text-center" href="/menu_button">
+                    Menu
+                </a>
+                <a class="list-group-item list-group-item-action bg-light fas fa-user" href="/user_button">
+                    Add User
+                </a>
+				<a class="list-group-item list-group-item-action bg-light fas fa-home" href="/rumah_button">
+                    Home Automation
+                </a>
+                <a class="list-group-item list-group-item-action bg-light fas fa-clock" href="/jadwal_button">
+                    Schedule
+                </a>
+                <div class="row container pt-3">
+                    <p class="text-bold">Schedule Pompa</p>
+                    <form action="get3">
+                        <input type="time" name="butonon"> On
+                        <input type="time" name="butonoff"> Off 
+                        <br>
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                </div>
+                <a class="list-group-item list-group-item-action bg-light" href="/kontak_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                    </svg>
+                    Our Contact
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+
+        <!-- page-wrapper -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <a id="menu-toggle" class="btn btn-sm btn-light" href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/keluar_button0">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- sideavr -->
+            <main id="rumah">
+                <div class="container-fluid">
+                    <div class="row pt-5 mx-auto">
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 1</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s1" %status1%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 2</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s2" %status2%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 3</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s3" %status3%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 4</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s4" %status4%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 5</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s5" %status5%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 6</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s6" %status6%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Ruang 7</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s7" %status7%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3 mb-3">
+                            <div class="card-transparent">
+                                <div class="card-body">
+                                    <div class="card-transparent mx-auto" style="max-width: 18em;">
+                                        <div class="text-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="max-width: 100px;" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="container">
+                                            <div class="text-center">
+                                                <p>Pompa</p>
+                                                <label class="switch"><input type="checkbox" onchange="check()" id="s8" %status8%><span class="slider"></span></label>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="text-center fixed-bottom">&copy; 2021 CV. Planet Intelligent</footer>
+            </main>
+            
+        </div>
+        <!-- page-wrapper -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstra0pcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script> -->
+
+        <script>
+            var Socket;
+            var obj;
+            var button_1_status = 0;
+            var button_2_status = 0;
+            var button_3_status = 0;
+            var button_4_status = 0;
+            var button_5_status = 0;
+            var button_6_status = 0;
+            var button_7_status = 0;
+            var button_8_status = 0;
+            var led1 = 0;
+            var led2 = 0;
+            var led3 = 0;
+            var led4 = 0;
+            var led5 = 0;
+            var led6 = 0;
+            var led7 = 0;
+            var led8 = 0;
+
+            function check() {
+            val1 = document.getElementById("s1").checked;
+            if (val1)
+                button_1_status = 1;
+            else
+                button_1_status = 0;            
+
+            val2 = document.getElementById("s2").checked;
+            if (val2)
+                button_2_status = 1;
+            else
+                button_2_status = 0;            
+
+            val3 = document.getElementById("s3").checked;
+            if (val3)
+                button_3_status = 1;
+            else
+                button_3_status = 0;           
+
+            val4 = document.getElementById("s4").checked;
+            if (val4)
+                button_4_status = 1;
+            else
+                button_4_status = 0;            
+
+            val5 = document.getElementById("s5").checked;
+            if (val5)
+                button_5_status = 1;
+            else
+                button_5_status = 0;            
+
+            val6 = document.getElementById("s6").checked;
+            if (val6)
+                button_6_status = 1;
+            else
+                button_6_status = 0;            
+
+            val7 = document.getElementById("s7").checked;
+            if (val7)
+                button_7_status = 1;
+            else
+                button_7_status = 0;            
+
+            val8 = document.getElementById("s8").checked;
+            if (val8)
+                button_8_status = 1;
+            else
+                button_8_status = 0;
+            sendStatus()
+            }
+
+            function sendStatus() {
+                var full_data = '{"LED1" :'+button_1_status+',"LED2":'+button_2_status+',"LED3":'+button_3_status+',"LED4":'+button_4_status+',"LED5":'+button_5_status+',"LED6":'+button_6_status+',"LED7":'+button_7_status+',"LED8":'+button_8_status+'}';
+                webSocket.send(full_data);
+            }
+
+            var gwUrl = "ws://" + location.host + "/ws";
+            var webSocket = new WebSocket(gwUrl);
+
+            webSocket.onopen = function(event) {
+                console.log("open");
+            }
+            
+            webSocket.onclose = function(event) {
+                console.log("close");
+            }
+
+            webSocket.onmessage = function (event) {
+                // document.getElementById("rxConsole").value += event.data;
+                obj = JSON.parse(event.data);
+    
+                var full_data1 = event.data;
+                console.log(full_data1);
+                var data = JSON.parse(full_data1);
+                led1 = data.LED1;
+                led2 = data.LED2;
+                led3 = data.LED3;
+                led4 = data.LED4;
+                led5 = data.LED5;
+                led6 = data.LED6;
+                led7 = data.LED7;
+                led8 = data.LED8;
+
+                if (led1 == '1')
+                    document.getElementById('s1').checked = true;
+                else
+                    document.getElementById('s1').checked = false;
+                    
+                if (led2 == '1')
+                    document.getElementById('s2').checked = true;
+                else
+                    document.getElementById('s2').checked = false;
+                        
+                if (led3 == '1')
+                    document.getElementById('s3').checked = true;
+                else
+                    document.getElementById('s3').checked = false;
+                        
+                if (led4 == '1')
+                    document.getElementById('s4').checked = true;
+                else
+                    document.getElementById('s4').checked = false;
+                        
+                if (led5 == '1')
+                    document.getElementById('s5').checked = true;
+                else
+                    document.getElementById('s5').checked = false;
+                        
+                if (led6 == '1')
+                    document.getElementById('s6').checked = true;
+                else
+                    document.getElementById('s6').checked = false;
+                        
+                if (led7 == '1')
+                    document.getElementById('s7').checked = true;
+                else
+                    document.getElementById('s7').checked = false;
+                        
+                if (led8 == '1')
+                    document.getElementById('s8').checked = true;
+                else
+                    document.getElementById('s8').checked = false;
+            }
+        
+
+            $("#menu-toggle").click(function (event) {
+                event.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+
+            // function toggleCheckbox(element) {
+            //     var xhr = new XMLHttpRequest();
+            //     if (element.checked) { xhr.open("GET", "/update?relay=" + element.id + "&state=1", true); }
+            //     else { xhr.open("GET", "/update?relay=" + element.id + "&state=0", true); }
+            //     xhr.send();
+            // }
+        </script>
+        <style>
+    .switch {position: relative; display: inline-block; width: 60px; height: 27px} 
+    .switch input {display: none}
+    .slider {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; border-radius: 34px}
+    .slider:before {position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 6px; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 28px}
+    input:checked+.slider {background-color: #2196F3}
+    input:checked+.slider:before {-webkit-transform: translateX(42px); -ms-transform: translateX(42px); transform: translateX(38px)}
+</style>
+</html>

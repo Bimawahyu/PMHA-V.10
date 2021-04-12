@@ -1,0 +1,242 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energy Monitoring</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Energy Monitoring</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action bg-light text-center" href="/menu_button">
+                    Menu
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/dashboard_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Dashboard <span class="sr-only">(current)</span>
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/arus_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-file">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                    </svg>
+                    Arus
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/tegangan_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-file">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                    </svg>
+                    Tegangan
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/cospi_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-file">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                    </svg>
+                    Cospi
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/pemakaian_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-file">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                    </svg>
+                    Pemakaian
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/user_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-users">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Add User
+                </a>
+                <a class="list-group-item list-group-item-action bg-light" href="/kontak_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                    </svg>
+                    Our Contact
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <a id="menu-toggle" class="btn btn-sm btn-light" href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/keluar_button">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- sideavr -->
+            <main>
+                <div class="container-fluid">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Pemakaian</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <!-- <div class="btn-group mr-2">
+                                <button class="btn btn-sm btn-outline-info">Share</button>
+                                <button class="btn btn-sm btn-outline-info">Export</button>
+                            </div> -->
+                            <form action="/get0">
+                                <input name="Date" placeholder="pemakaian" type="month" class="btn btn-sm btn-outline-info">
+                                <button class="btn btn-outline-success" type="submit">Submit</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <table class="table table-hover table-fixed">
+                        <tr>
+                            <th>Apparent Power (VA)</th>
+                            <th>Real Power (Watt)</th>
+                            <th>Voltage (Vrms)</th>
+                            <th>Current (Irms)</th>
+                            <th>Power Factor</th>
+                            <th>Power Consumption (WattHour)</th>
+                            <th>Cost (Rp.)</th>
+                        </tr>
+
+                        <tr>
+                            <td id="daya_s_" align="center"></td>
+                            <td id="daya_p_" align="center"></td>
+                            <td id="tegangan_" align="center"></td>
+                            <td id="arus_" align="center"></td>
+                            <td id="cospi_" align="center"></td>
+                            <td id="pemakaian_" align="center"></td>
+                            <td id="biaya_" align="center"></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <footer class="text-center fixed-bottom">&copy; 2021 CV. Planet Intelligent</footer>
+            </main>
+            
+        </div>
+        <!-- page-wrapper -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <script>
+            var Socket;
+            var obj;
+            var dayaS = 0;
+            var dayaP = 0;
+            var v = 0;
+            var i = 0;
+            var c = 0;
+            var k = 0;
+            var b = 0;
+            var S = 0;
+            var P = 0;
+            var V = 0;
+            var I = 0;
+            var C = 0;
+            var K = 0;
+            var B = 0;
+
+            var gwUrl = "ws://" + location.host + "/ws";
+            var webSocket = new WebSocket(gwUrl);
+
+            webSocket.onopen = function(event) {
+                console.log("open");
+            }
+            
+            webSocket.onclose = function(event) {
+                console.log("close");
+            }
+
+            webSocket.onmessage = function (event) {
+                // document.getElementById("rxConsole").value += event.data;
+                obj = JSON.parse(event.data);
+    
+                var full_data1 = event.data;
+                console.log(full_data1);
+                var data = JSON.parse(full_data1);
+
+                S = data.S;
+                P = data.P;
+                V = data.V;
+                I = data.I;
+                C = data.Cp;
+                K = data.K;
+                B = data.B;
+
+                document.getElementById("daya_s_").innerHTML = S;
+                document.getElementById("daya_p_").innerHTML = P;
+                document.getElementById("tegangan_").innerHTML = V;
+                document.getElementById("arus_").innerHTML = I;
+                document.getElementById("cospi_").innerHTML = C;
+                document.getElementById("pemakaian_").innerHTML = K;
+                document.getElementById("biaya_").innerHTML = B;
+            }
+        
+
+            $("#menu-toggle").click(function (event) {
+                event.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+
+        </script>
+
+</body>
+
+</html>
