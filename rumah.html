@@ -37,7 +37,7 @@
                 <a class="list-group-item list-group-item-action bg-light fas fa-clock" href="/jadwal_button">
                     Schedule
                 </a>
-                <div class="row container pt-3">
+                <!-- <div class="row container pt-3">
                     <p class="text-bold">Schedule Pompa</p>
                     <form action="get3">
                         <input type="time" name="butonon"> On
@@ -45,7 +45,7 @@
                         <br>
                         <button class="btn" type="submit">Submit</button>
                     </form>
-                </div>
+                </div> -->
                 <a class="list-group-item list-group-item-action bg-light" href="/kontak_button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-envelope" viewBox="0 0 16 16">
@@ -58,22 +58,7 @@
         </div>
         <!-- Sidebar -->
 
-        <!-- page-wrapper -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script>
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        </script>
+        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -95,7 +80,7 @@
                                 <img src="login.png" alt="logo" width="25" height="25">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/reset">Sign Out</a>
+                              <a class="dropdown-item" href="/keluar_button">Sign Out</a>
                               <a class="dropdown-item" href="/reset">Reset Password</a>
                             </div>
                         </li>
@@ -119,7 +104,22 @@
                                         <div class="container">
                                             <div class="text-center">
                                                 <p>Ruang 1</p>
-                                                <label class="switch"><input type="checkbox" onchange="check()" id="s1" %status1%><span class="slider"></span></label>
+                                                <label class="switch"><input type="checkbox" onchange="check(this)" id="s1" %status1%><span class="slider"></span></label>
+                                                <form action="jadwal1">
+                                                    <div class="form-group row">
+                                                        <label for="butonon1" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff1" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff1">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -139,6 +139,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 2</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s2" %status2%><span class="slider"></span></label>
+                                                <form action="jadwal2">
+                                                    <div class="form-group row">
+                                                        <label for="butonon2" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff2" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff2">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -158,6 +173,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 3</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s3" %status3%><span class="slider"></span></label>
+                                                <form action="jadwal3">
+                                                    <div class="form-group row">
+                                                        <label for="butonon3" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon3">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff3" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff3">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -177,6 +207,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 4</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s4" %status4%><span class="slider"></span></label>
+                                                <form action="jadwal4">
+                                                    <div class="form-group row">
+                                                        <label for="butonon4" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff4" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff4">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -196,6 +241,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 5</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s5" %status5%><span class="slider"></span></label>
+                                                <form action="jadwal5">
+                                                    <div class="form-group row">
+                                                        <label for="butonon5" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon5">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff5" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff5">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -215,6 +275,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 6</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s6" %status6%><span class="slider"></span></label>
+                                                <form action="jadwal6">
+                                                    <div class="form-group row">
+                                                        <label for="butonon6" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon6">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff6" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff6">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -234,6 +309,21 @@
                                             <div class="text-center">
                                                 <p>Ruang 7</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s7" %status7%><span class="slider"></span></label>
+                                                <form action="jadwal7">
+                                                    <div class="form-group row">
+                                                        <label for="butonon7" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon7">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff7" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff7">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -251,8 +341,23 @@
                                         </div>
                                         <div class="container">
                                             <div class="text-center">
-                                                <p>Pompa</p>
+                                                <p>Ruang 8</p>
                                                 <label class="switch"><input type="checkbox" onchange="check()" id="s8" %status8%><span class="slider"></span></label>
+                                                <form action="jadwal8">
+                                                    <div class="form-group row">
+                                                        <label for="butonon8" class="col-2 col-form-label">ON</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonon8">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="butonoff8" class="col-2 col-form-label">OFF</label>
+                                                        <div class="col-8">
+                                                            <input class="form-control" type="time" name="butonoff8">
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-success rounded">Submit</button>
+                                                </form>
                                             </div>
                                         </div>    
                                     </div>
@@ -261,21 +366,20 @@
                         </div>
                     </div>
                 </div>
-                <footer class="text-center fixed-bottom">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
+                <footer class="text-center">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
             </main>
             
         </div>
         <!-- page-wrapper -->
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstra0pcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script> -->
-
+            crossorigin="anonymous"></script>
         <script>
             var Socket;
             var obj;

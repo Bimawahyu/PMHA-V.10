@@ -15,6 +15,8 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
@@ -34,29 +36,11 @@
                 <a class="list-group-item list-group-item-action bg-light fas fa-home" href="/rumah_button">
                     Home Automation
                 </a>
-                <a class="list-group-item list-group-item-action bg-light fas fa-clock" href="/jadwal_button">
-                    Schedule
-                </a>
-                <!-- <div class="row text-center pt-3">
-                    <p>Schadule Pompa</p>
-                    <form action="get">
-                        <input type="time" name="on" id="butonon">On
-                        <button class="btn">Submit</button>
-                        <input type="time" name="off" id="butonoff">Off
-                        <button class="btn">Submit</button>
-                    </form>
-                </div> -->
-                    
                 
-                <a class="list-group-item list-group-item-action bg-light" href="/kontak_button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
-                    </svg>
+                <a class="list-group-item list-group-item-action bg-light fas fa-envelope" href="/kontak_button">
                     Our Contact
                 </a>
-                <div class="container pt-xl-5 figure-img">
+                <div class="container pt-5">
                     <img src="pi.png" alt="logo" width="200" height="150">
                 </div>
             </div>
@@ -88,7 +72,7 @@
                             <img src="login.png" alt="logo" width="25" height="25">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/reset">Sign Out</a>
+                          <a class="dropdown-item" href="/keluar_button">Sign Out</a>
                           <a class="dropdown-item" href="/reset">Reset Password</a>
                         </div>
                       </li>
@@ -113,57 +97,107 @@
 
                         <tr>
                             <td id="nomor">1</td>
-                            <td id="unit">Pompa</td>
-                            <td id="onr1"></td>
-                            <td id="offr1"></td>
+                            <td id="unit">Ruang 1</td>
+                            <td id="onr1" align="center"></td>
+                            <td id="offr1" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch1" %T1%>
+                                    <label class="custom-control-label" for="switch1"></label>
+                                </div>
+                            </td>
                         </tr>
-                        <!-- <tr>
+                        <tr>
                             <td id="nomor">2</td>
                             <td id="unit">Ruang 2</td>
-                            <td id="onr2"></td>
-                            <td id="offr2"></td>
+                            <td id="onr2" align="center"></td>
+                            <td id="offr2" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch2" %T2%>
+                                    <label class="custom-control-label" for="switch2"></label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">3</td>
                             <td id="unit">Ruang 3</td>
-                            <td id="onr3"></td>
-                            <td id="offr3"></td>
+                            <td id="onr3" align="center"></td>
+                            <td id="offr3" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch3" %T3%> 
+                                    <label class="custom-control-label" for="switch3"></label>
+                                </div>                            
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">4</td>
                             <td id="unit">Ruang 4</td>
-                            <td id="onr4"></td>
-                            <td id="offr4"></td>
+                            <td id="onr4" align="center"></td>
+                            <td id="offr4" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch4" %T4%>
+                                    <label class="custom-control-label" for="switch4"></label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">5</td>
                             <td id="unit">Ruang 5</td>
-                            <td id="onr5"></td>
-                            <td id="offr5"></td>
+                            <td id="onr5" align="center"></td>
+                            <td id="offr5" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch5" %T5%>
+                                    <label class="custom-control-label" for="switch5"></label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">6</td>
                             <td id="unit">Ruang 6</td>
-                            <td id="onr6"></td>
-                            <td id="offr6"></td>
+                            <td id="onr6" align="center"></td>
+                            <td id="offr6" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch6" %T6%>
+                                    <label class="custom-control-label" for="switch6"></label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">7</td>
                             <td id="unit">Ruang 7</td>
-                            <td id="onr7"></td>
-                            <td id="offr7"></td>
+                            <td id="onr7" align="center"></td>
+                            <td id="offr7" align="center"></td>
+                            <td align="center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch7" %T7%>
+                                    <label class="custom-control-label" for="switch7"></label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td id="nomor">8</td>
                             <td id="unit">Ruang 8</td>
-                            <td id="onr8"></td>
-                            <td id="offr8"></td>
-                        </tr> -->
+                            <td id="onr8" align="center"></td>
+                            <td id="offr8" align="center"></td>
+                            <td align="center">
+                                <!-- Material checked -->
+                                <!-- Default switch -->
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" onchange="check()" id="switch8" %T8%>
+                                    <label class="custom-control-label" for="switch8"></label>
+                                </div>
+                            </td>		
+                        </tr>
                         
 
                     </table>
                 </div>
-                <footer class="text-center fixed-bottom">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
+                <footer class="text-center">Copyright &copy; 2021 PT. Ruang Cipta Teknologi</footer>
             </main>
             
         </div>
@@ -181,8 +215,94 @@
             var obj;
             var gwUrl = "ws://" + location.host + "/ws";
             var webSocket = new WebSocket(gwUrl);
-            var waktuOn;
-            var waktuOff;
+            var waktuOn1;
+            var waktuOff1;
+            var waktuOn2;
+            var waktuOff2;
+            var waktuOn3;
+            var waktuOff3;
+            var waktuOn4;
+            var waktuOff4;
+            var waktuOn5;
+            var waktuOff5;
+            var waktuOn6;
+            var waktuOff6;
+            var waktuOn7;
+            var waktuOff7;
+            var waktuOn8;
+            var waktuOff8;
+            // var T1;
+            // var T2;
+            // var T3;
+            // var T4;
+            // var T5;
+            // var T6;
+            // var T7;
+            // var T8;
+            var button_1_status = 0;
+            var button_2_status = 0;
+            var button_3_status = 0;
+            var button_4_status = 0;
+            var button_5_status = 0;
+            var button_6_status = 0;
+            var button_7_status = 0;
+            var button_8_status = 0;
+
+            function check() {
+            val1 = document.getElementById("switch1").checked;
+            if (val1)
+                button_1_status = 1;
+            else
+                button_1_status = 0;            
+
+            val2 = document.getElementById("switch2").checked;
+            if (val2)
+                button_2_status = 1;
+            else
+                button_2_status = 0;            
+
+            val3 = document.getElementById("switch3").checked;
+            if (val3)
+                button_3_status = 1;
+            else
+                button_3_status = 0;           
+
+            val4 = document.getElementById("switch4").checked;
+            if (val4)
+                button_4_status = 1;
+            else
+                button_4_status = 0;            
+
+            val5 = document.getElementById("switch5").checked;
+            if (val5)
+                button_5_status = 1;
+            else
+                button_5_status = 0;            
+
+            val6 = document.getElementById("switch6").checked;
+            if (val6)
+                button_6_status = 1;
+            else
+                button_6_status = 0;            
+
+            val7 = document.getElementById("switch7").checked;
+            if (val7)
+                button_7_status = 1;
+            else
+                button_7_status = 0;            
+
+            val8 = document.getElementById("switch8").checked;
+            if (val8)
+                button_8_status = 1;
+            else
+                button_8_status = 0;
+            sendStatus()
+            }
+
+            function sendStatus() {
+                var full_data = '{"al1" :'+button_1_status+',"al2":'+button_2_status+',"al3":'+button_3_status+',"al4":'+button_4_status+',"al5":'+button_5_status+',"al6":'+button_6_status+',"al7":'+button_7_status+',"al8":'+button_8_status+'}';
+                webSocket.send(full_data);
+            }
 
             webSocket.onopen = function(event) {
                 console.log("open");
@@ -200,14 +320,84 @@
                 console.log(full_data1);
                 var data = JSON.parse(full_data1);
 
-                waktuOn = data.jamon+':'+data.meniton;
-                waktuOff = data.jamoff+':'+data.menitoff;
+                waktuOn1 = data.jamon1+':'+data.meniton1;
+                waktuOff1 = data.jamoff1+':'+data.menitoff1;
+                waktuOn2 = data.jamon2+':'+data.meniton2;
+                waktuOff2 = data.jamoff2+':'+data.menitoff2;
+                waktuOn3 = data.jamon3+':'+data.meniton3;
+                waktuOff3 = data.jamoff3+':'+data.menitoff3;
+                waktuOn4 = data.jamon4+':'+data.meniton4;
+                waktuOff4 = data.jamoff4+':'+data.menitoff4;
+                waktuOn5 = data.jamon5+':'+data.meniton5;
+                waktuOff5 = data.jamoff5+':'+data.menitoff5;
+                waktuOn6 = data.jamon6+':'+data.meniton6;
+                waktuOff6 = data.jamoff6+':'+data.menitoff6;
+                waktuOn7 = data.jamon7+':'+data.meniton7;
+                waktuOff7 = data.jamoff7+':'+data.menitoff7;
+                waktuOn8 = data.jamon8+':'+data.meniton8;
+                waktuOff8 = data.jamoff8+':'+data.menitoff8;
+
+                // T1 = data.t1;
+                // T2 = data.t2;
+                // T3 = data.t3;
+                // T4 = data.t4;
+                // T5 = data.t5;
+                // T6 = data.t6;
+                // T7 = data.t7;
+                // T8 = data.t8;
+
+                // if (T1 == '1')
+                //     document.getElementById("switch1").checked = true;
+                // else
+                //     document.getElementById("switch1").checked = false;
+                // if (T2 == '1')
+                //     document.getElementById("switch2").checked = true;
+                // else
+                //     document.getElementById("switch2").checked = false;
+                // if (T3 == '1')
+                //     document.getElementById("switch3").checked = true;
+                // else
+                //     document.getElementById("switch3").checked = false;
+                // if (T4 == '1')
+                //     document.getElementById("switch4").checked = true;
+                // else
+                //     document.getElementById("switch4").checked = false;
+                // if (T5 == '1')
+                //     document.getElementById("switch5").checked = true;
+                // else
+                //     document.getElementById("switch5").checked = false;
+                // if (T6 == '1')
+                //     document.getElementById("switch6").checked = true;
+                // else
+                //     document.getElementById("switch6").checked = false;
+                // if (T7 == '1')
+                //     document.getElementById("switch7").checked = true;
+                // else
+                //     document.getElementById("switch7").checked = false;
+                // if (T8 == '1')
+                //     document.getElementById("switch8").checked = true;
+                // else
+                //     document.getElementById("switch8").checked = false;
 
                 // waktuOn = data.waktuon;
                 // waktuOff = data.waktuoff;
                 
-                document.getElementById("onr1").innerHTML = waktuOn;
-                document.getElementById("offr1").innerHTML = waktuOff;
+                document.getElementById("onr1").innerHTML = waktuOn1;
+                document.getElementById("offr1").innerHTML = waktuOff1;
+                document.getElementById("onr2").innerHTML = waktuOn2;
+                document.getElementById("offr2").innerHTML = waktuOff2;
+                document.getElementById("onr3").innerHTML = waktuOn3;
+                document.getElementById("offr3").innerHTML = waktuOff3;
+                document.getElementById("onr4").innerHTML = waktuOn4;
+                document.getElementById("offr4").innerHTML = waktuOff4;
+                document.getElementById("onr5").innerHTML = waktuOn5;
+                document.getElementById("offr5").innerHTML = waktuOff5;
+                document.getElementById("onr6").innerHTML = waktuOn6;
+                document.getElementById("offr6").innerHTML = waktuOff6;
+                document.getElementById("onr7").innerHTML = waktuOn7;
+                document.getElementById("offr7").innerHTML = waktuOff7;
+                document.getElementById("onr8").innerHTML = waktuOn8;
+                document.getElementById("offr8").innerHTML = waktuOff8;
             }
 
             $("#menu-toggle").click(function (event) {

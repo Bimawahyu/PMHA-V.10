@@ -1,2 +1,2 @@
-# PMHA-V.10
-Power Metering Home Automation Version 1.0
+# PMHA-V1.1
+Power Metering Version 1.1
